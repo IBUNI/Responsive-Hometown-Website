@@ -1,0 +1,95 @@
+.content {
+  display:flex;
+  flex-wrap:wrap;
+ }
+ 
+ .hamb__menu {
+  display:none;
+ }
+ 
+ @media screen and (max-width: 550px) {
+.scores {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.weather {
+  width: 100%;
+  }
+  
+ .hamb__menu { 
+  display: inline-block;
+  position: absolute;
+  right:0;
+  padding:0.7em; 
+  font-size:34px
+   }
+   
+.header__title {  
+  font-size: 2em;
+  margin: 1.2em 0.25em
+}
+
+.nav {
+  z-index: 10; 
+  background-color: #fff;
+  width: 300px;
+  position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+	    
+.nav.open {
+ -webkit-transform: translate(0, 0);
+ transform: translate(0, 0);
+   }	 
+
+.nav__item {
+  display: list-item;
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  text-align: left;
+ }
+}
+
+@media screen and (min-width: 551px) {
+.hero{
+  width: 50%;
+ }
+ 
+.weather, .scores {
+  width: 100%;
+  }
+  
+ .top-news {
+  width: 50%;
+  font-size: 1.2em;
+ }
+}
+ 
+@media screen and (min-width: 800px) {
+main,.content,.nav,.header__inner {
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.scores {
+	width: 60%;
+}
+.weather {
+	width: 40%;
+}
+
+.hamb__menu {
+  display: none;
+ }
+
+ .hero {
+  background-position: top;
+ }
+
+}
+
